@@ -38,10 +38,11 @@
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        
                       </li>
                     </ul>
-                  </div>
-                  <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+                  </div>  
+                  <button id="filter-btn" type="submit" onclick= "dateSearch()" class="btn btn-default">Filter Table</button>
                 </form>
               </div>
             </div>
@@ -49,11 +50,8 @@
         </div>
         <div class="col-md-10">
           <div id="table-area" class="">
-            <table id="ufo-table" class="table table-striped">
-              <thead>
-                <div id="myTable">
-
-                </div>
+            <table id="myTable" class="table table-striped">
+            
               <tbody></tbody>
             </table>
           </div>

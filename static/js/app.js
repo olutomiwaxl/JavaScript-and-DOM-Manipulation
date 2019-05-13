@@ -31,6 +31,8 @@ var myvar = '<table>'+
 '<th>Comments</th>'+
 '</tr>';
 
+
+// show data table
 for(var i = 0; i < rowLenght; i++){
     myvar += '<tr>'+
     '<td>'+tableData[i].datetime+'</td>'+
@@ -47,3 +49,27 @@ for(var i = 0; i < rowLenght; i++){
 
      console.log(myvar);
      document.getElementById('myTable').innerHTML = myvar;
+
+
+// date filter for the table 
+function myDateInput() {
+    // Declare variables 
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("datetime");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide unneeded data
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0]; 
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      } 
+    }
+  }
