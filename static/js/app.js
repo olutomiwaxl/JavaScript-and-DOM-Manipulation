@@ -33,26 +33,28 @@ var myvar = '<table>'+
 
 
 // show data table
-for(var i = 0; i < rowLenght; i++){
-    myvar += '<tr>'+
-    '<td>'+tableData[i].datetime+'</td>'+
-    '<td>'+tableData[i].city+'</tD>'+
-    '<td>'+tableData[i].state+'</th>'+
-    '<td>'+tableData[i].country+'</th>'+
-    '<td>'+tableData[i].shape+'</th>'+
-    '<td>'+tableData[i].durationMinutes+'</th>'+
-    '<td>'+tableData[i].comments+'</th>'+
-    '</tr>'     
-     }
-    
-     myvar += '</table>';
 
-     console.log(myvar);
-     document.getElementById('myTable').innerHTML = myvar;
+
+    for(var i = 0; i < rowLenght; i++){
+        myvar += '<tr>'+
+        '<td>'+tableData[i].datetime+'</td>'+
+        '<td>'+tableData[i].city+'</tD>'+
+        '<td>'+tableData[i].state+'</th>'+
+        '<td>'+tableData[i].country+'</th>'+
+        '<td>'+tableData[i].shape+'</th>'+
+        '<td>'+tableData[i].durationMinutes+'</th>'+
+        '<td>'+tableData[i].comments+'</th>'+
+        '</tr>'     
+        }
+        
+        myvar += '</table>';
+
+        console.log(myvar);
+        document.getElementById('myTable').innerHTML = myvar;
 
 
 // date filter for the table 
-function myDateInput() {
+function dateSearch() {
     // Declare variables 
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("datetime");
