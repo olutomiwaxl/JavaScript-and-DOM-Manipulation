@@ -5,11 +5,11 @@
     min-width: 40px;
 }
 
-.table, th, td  {
+.table, th, td{
     background-color: black;
 }
 
-#myTable {
+#myTable{
     padding: 20px
     border: 1px solid black;
 }
@@ -25,5 +25,7 @@
     border: 1px solid #ddd; /* Add a grey border */
     margin-bottom: 12px; /* Add some space below the input */
   }
-  
-  
+.btn {
+    background-color: black;
+    color: white
+}
